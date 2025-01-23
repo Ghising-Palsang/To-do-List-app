@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* ========= Typography ============ */
+h2{
+    color: darkblue;
+    margin-bottom: 1em;
+}
+
+
+
+
+
+/* ========= Layout ============ */
+.main-container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: steelblue;
+    padding:1em;
+}
+
+.todo-app{
+    width:100%;
+    max-width: 540px;
+    padding:2em 2em 10em;
+    margin:4em auto 2em;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:#edeef0;
+    border-radius: 30px;
+    padding-left:1.25em;
+    margin-bottom:1em
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background:transparent;
+    padding:1em;
+    font-weight: 14px;
+}
+
+button{
+    border:none;
+    padding:1em 3em;
+    background: forestgreen;
+    border-radius: 30px;
+    color:#fff;
+    cursor:pointer;
+    font-weight: 400;
+    font-size: .85rem;
+}
+
+ul li{
+    list-style: none;
+    padding:1em .75em 1em 3em;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.list-container li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image:url(unchecked-10.png);
+    background-size:cover;
+    background-position: center;
+    top:10px;
+    left:5px;
+}
+
+
+ul li.checked{
+    text-decoration: line-through;
+    color:grey;
+}
+
+ul li.checked::before{
+    background-image:url(download.png);
+}
+
+ul li span{
+    position: absolute;
+    right:0;
+    top:8px;
+    width:40px;
+    height: 40px;
+    font-size:1rem;
+    color:#555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background:lightgray;
+}
+
